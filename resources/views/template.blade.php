@@ -10,7 +10,7 @@
 
 <!-- Hero börjar -->
 
-<section class="hero is-dark">
+<section class="hero is-dark" >
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -18,26 +18,26 @@ Movie Database
 </h1>
     </div>
   </div>
+
+<!-- Navigation -->
+
+<div class="hero-foot">
+  <nav class="tabs is-boxed is-fullwidth">
+    <div class="container">
+      <ul>
+        <li class="is-active"><a href="/">Homepage</a></li>
+        <li><a href="/movies">Movies</a></li>
+        <li><a href="/actors">Actors</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 </section>
 
 <!-- Hero slutar -->
 
-<!-- Meny -->
-
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
-
-  <a href="/" class="navbar-item">Home</a>
-  <a href="/movies" class="navbar-item">Movies</a>
-  <a href="/actors" class="navbar-item">Actors</a>
-
-  </nav>
-
-    <!-- Meny slutar -->
-
 <section class="section">
-  <div class="columns">
     @yield('content')
-  </div>
 </section>
 
 <!--Footer börjar -->
