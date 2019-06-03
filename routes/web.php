@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/movies', function () {
+    return view('movies');
+});
+
+Route::get('/actors', function () {
+    return view('actors');
+});

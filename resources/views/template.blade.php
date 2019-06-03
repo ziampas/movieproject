@@ -24,9 +24,13 @@ Movie Database
 
 <!-- Meny -->
 
-    <ul>
-      <li><a href="/">Index</a></li>
-    </ul>
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+
+  <a href="/" class="navbar-item">Home</a>
+  <a href="/movies" class="navbar-item">Movies</a>
+  <a href="/actors" class="navbar-item">Actors</a>
+
+  </nav>
 
     <!-- Meny slutar -->
 
