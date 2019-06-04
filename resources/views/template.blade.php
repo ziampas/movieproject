@@ -28,6 +28,7 @@ Movie Database
         <li class="is-active"><a href="/">Homepage</a></li>
         <li><a href="/movies">Movies</a></li>
         <li><a href="/actors">Actors</a></li>
+        <li><a href="/add">Add movie</a></li>
       </ul>
     </div>
   </nav>

@@ -22,3 +22,7 @@ Route::get('/movies', function () {
 Route::get('/actors', function () {
     return view('actors');
 });
+
+Route::get('/add', function () {
+    return view('addmovie');
+});
