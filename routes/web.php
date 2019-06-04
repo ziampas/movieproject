@@ -16,16 +16,17 @@ Route::get('/', function () {
 });
 
 Route::get('/movies', function () {
-    return view('movies');
+    return view('movies/view');
 });
 
 Route::get('/actors', function () {
-    return view('actors');
+    return view('actors/view');
 });
 
-Route::get('/add', function () {
-    return view('addmovie');
+Route::get('/genre', function () {
+    return view('genre/view');
 });
+
 
 Auth::routes();
 
