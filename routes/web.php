@@ -26,3 +26,7 @@ Route::get('/actors', function () {
 Route::get('/add', function () {
     return view('addmovie');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
