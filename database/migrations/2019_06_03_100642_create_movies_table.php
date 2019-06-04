@@ -18,6 +18,7 @@ class CreateMoviesTable extends Migration
           $table->string('moviesname');
           $table->date('movieyear');
           $table->string('movieplot');
+          $table->string('moviepicture');
       });
     }
 

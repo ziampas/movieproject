@@ -23,9 +23,16 @@ Route::get('/actors', function () {
     return view('actors/view');
 });
 
-Route::get('/genre', function () {
+Route::get('/genre/', function () {
     return view('genre/view');
 });
+
+
+//Routes för movies
+
+//Routes för actors
+
+//Routes för genres
 
 
 Auth::routes();
