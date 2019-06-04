@@ -33,6 +33,16 @@ Route::get('/genre/', function () {
 //Routes för actors
 
 //Routes för genres
+Route::get('/genre/add', function () {
+    return view('genre/add');
+});
+Route::get('/genre/edit', function () {
+    return view('genre/edit');
+});
+Route::get('/genre/remove', function () {
+    return view('genre/remove');
+});
+
 
 
 Auth::routes();
