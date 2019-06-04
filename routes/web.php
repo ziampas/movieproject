@@ -19,9 +19,7 @@ Route::get('/movies', function () {
     return view('movies/view');
 });
 
-Route::get('/actors', function () {
-    return view('actors/view');
-});
+Route::get('/actors', 'ActorsController@index');
 
 Route::get('/genre/', function () {
     return view('genre/view');
@@ -31,6 +29,18 @@ Route::get('/genre/', function () {
 //Routes för movies
 
 //Routes för actors
+
+Route::get('/actors/add', function () {
+    return view('actors/add');
+});
+
+Route::get('/actors/edit', function () {
+    return view('actors/edit');
+});
+
+Route::get('/actors/remove', function () {
+    return view('actors/remove');
+});
 
 //Routes för genres
 
