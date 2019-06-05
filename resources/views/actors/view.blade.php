@@ -1,6 +1,8 @@
 @extends('template')
 
 @section('content')
+<div class="columns">
+  <div class="column">
 
 <h1 class="title is-4">Actors:</h1>
 <table class="table">
@@ -17,5 +19,13 @@
   </tr>
   @endforeach
 </table>
+</div>
 
+
+<div class="column">
+  <h1 class="title is-4">Add actors:</h1>
+  <a href="/actors/add">Log in to add actors</a>
+</div>
+
+</div>
 @endsection

@@ -13,9 +13,8 @@
 <section class="hero is-dark" >
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
-Movie Database
-</h1>
+<!-- <img src="{{ URL::to('/') }}/img/logo.png" alt=""> -->
+<h1 class="title is-2">Movie DB</h1>
     </div>
   </div>
 
@@ -37,14 +36,38 @@ Movie Database
 
 <!-- Hero slutar -->
 
+
+  <div class="navbar-end">
+    <!-- navbar items -->
+  </div>
+</div>
+
 <section class="section">
     @yield('content')
 </section>
 
 <!--Footer börjar -->
 <footer class="footer">
-  <div class="content has-text-centered">
-  <strong>Copyright 2019</strong>
+  <div class="columns">
+    <div class="column">
+      <h1 class="title is-6">Copyright 2019</h1>
+      <img src="https://static1.squarespace.com/static/55e50bdfe4b0a8e8abf3e82c/t/5b57434ef950b7329f3f65f0/1532445581749/global-playstore.png" alt="googleplay" style="width: 200px;">
+    </div>
+    <div class="column">
+      <h1 class="title is-6">Links</h1>
+      <ul>
+        <li class="is-active"><a href="/">Homepage</a></li>
+        <li><a href="/movies">Movies</a></li>
+        <li><a href="/actors">Actors</a></li>
+        <li><a href="/genre">Genre</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h1 class="title is-6">Follow us:</h1>
+      <ul>
+        <li><i class="fab fa-facebook-square fa-5x"></i></li>
+      </ul>
+    </div>
   </div>
 </footer>
 <!--Footer slutar -->
