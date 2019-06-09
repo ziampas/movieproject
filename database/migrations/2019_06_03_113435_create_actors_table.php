@@ -14,7 +14,7 @@ class CreateActorsTable extends Migration
     public function up()
     {
       Schema::create('actors', function (Blueprint $table) {
-          $table->increments('actorid');
+          $table->increments('id');
           $table->string('firstname');
           $table->string('lastname');
           $table->date('birthdate');
