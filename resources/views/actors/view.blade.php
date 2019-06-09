@@ -9,13 +9,15 @@
   <tr>
     <th>First name</th>
     <th>Last name</th>
-    <th>Age</th>
+    <th>Date of birth</th>
+    <th></th>
   </tr>
   <tr>
     @foreach ($actors as $actor)
     <td>{{$actor->firstname}}</td>
     <td>{{$actor->lastname}}</td>
     <td>{{$actor->birthdate}}</td>
+    <td><a href="actors/{{ $actor->id }}"><button class="button is-small is-success">View</button></a></td>
   </tr>
   @endforeach
 </table>
@@ -24,7 +26,7 @@
 
 <div class="column">
   <h1 class="title is-4">Add actors:</h1>
-  <a href="/actors/add">Log in to add actors</a>
+  <a href="/actors/create">Log in to add actors</a>
 </div>
 
 </div>

@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/actors', 'ActorsController@index');
+Route::get('/movies', function () {
+    return view('movies/view');
+});
 
 Route::get('/genre/', function () {
     return view('genre/view');
@@ -27,19 +29,8 @@ Route::get('/movies', function () {
     return view('movies/index');
 });
 
-//Routes för actors
-
-Route::get('/actors/add', function () {
-    return view('actors/add');
-});
-
-Route::get('/actors/edit', function () {
-    return view('actors/edit');
-});
-
-Route::get('/actors/remove', function () {
-    return view('actors/remove');
-});
+//Routes för actors (Kristian)
+Route::resource('actors', 'ActorsController');
 
 //Routes för genres
 Route::get('/genre/add', function () {
