@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/movies', function () {
-    return view('movies/view');
-});
-
 Route::get('/actors', 'ActorsController@index');
 
 Route::get('/genre/', function () {
@@ -27,6 +23,9 @@ Route::get('/genre/', function () {
 
 
 //Routes för movies
+Route::get('/movies', function () {
+    return view('movies/index');
+});
 
 //Routes för actors
 
