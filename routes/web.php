@@ -15,45 +15,16 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/movies', function () {
-    return view('movies/view');
-});
-
 //Kristian
 Route::get('/actors', 'ActorsController@index');
 
 //Zeena
 Route::get('/genres', 'GenresController@index');
 
-
-
-//Routes för movies
-
-//Routes för actors
-
-Route::get('/actors/add', function () {
-    return view('actors/add');
+//Routes för movies (jan)
+Route::get('/movies', function () {
+    return view('movies/index');
 });
-
-Route::get('/actors/edit', function () {
-    return view('actors/edit');
-});
-
-Route::get('/actors/remove', function () {
-    return view('actors/remove');
-});
-
-//Routes för genres
-Route::get('/genres/add', function () {
-    return view('genre/add');
-});
-Route::get('/genres/edit', function () {
-    return view('genres/edit');
-});
-Route::get('/genres/remove', function () {
-    return view('genres/remove');
-});
-
 
 
 Auth::routes();
