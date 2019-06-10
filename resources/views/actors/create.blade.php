@@ -2,6 +2,7 @@
 
 @section('content')
 <h1 class="title is-4">Add an actor:</h1>
+<div class="box">
 <form method="post" action="/actors">
   {{ csrf_field() }}
 
@@ -11,6 +12,7 @@
   <button class="button is-success" type="submit">Add</button>
   <a href="/actors" class="button is-success">Go back</a>
 </form>
+</div>
 <!-- @if ($errors->any())
 <div class="notification is-danger" style="margin-top: 1rem;">
   <ul>
