@@ -11,4 +11,13 @@
   <button class="button is-success" type="submit">Add</button>
   <a href="/actors" class="button is-success">Go back</a>
 </form>
+@if ($errors->any())
+<div class="notification is-danger" style="margin-top: 1rem;">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
 @endsection
