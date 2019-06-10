@@ -38,8 +38,8 @@
   <div class="control" style="margin-top: 1rem;">
     <div class="field">
       <div class="control">
-        <button type="submit" class="button is-success">Delete actor</button>
-        <a href="/actors" class="button is-success">Go back</a>
+        <button type="submit" class="button is-danger">Delete actor</button>
+        <a href="/actors" class="button is-link">Go back</a>
       </div>
     </div>
 </div>

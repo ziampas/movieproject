@@ -1,15 +1,27 @@
 @extends('template')
 
 @section('content')
-<h1 class="title is-4">Movie: {{ $movie->moviesname}}</h1>
+<h1 class="title is-4">{{ $movie->moviesname}}</h1>
 
 <ul>
-    <li>{{ $movie->id}}</li>
     <li><img src="{{ $movie->moviepicture}}" alt=""></li>
-    <li>{{ $movie->moviesname}}</li>
-    <li>{{ $movie->movieyear}}</li>
+    <div class="box">
+    <li><h1 class="title is-4">{{ $movie->moviesname}}</h1></li>
+    <li><strong>{{ $movie->movieyear}}</strong></li>
     <li>{{ $movie->movieplot}}</li>
 </ul>
+</div>
+<div class="box" style="margin-top: 1rem;">
+<h1 class="title is-4">Casting:</h1>
+<table class="table">
+  <tr>
+    <th>Actors</th>
+  </tr>
+  <tr>
+    <td>Mark Wahlberg</td>
+  </tr>
+</table>
+</div>
 <a href="/movies/{{ $movie-> id}}/edit" class="button is-success" style="margin-top: 1rem;">Edit</a>
 <a href="/movies" class="button is-success" style="margin-top: 1rem;">Go back</a>
 <h3>Comments <small>{{ $movie->comments()->count() }} total</small></h3>
