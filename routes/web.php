@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 //Kristian
-Route::get('/actors', 'ActorsController@index');
+Route::resource('/actors', 'ActorsController');
 
 //Zeena
-Route::get('/genres', 'GenresController@index');
+Route::resource('/genres', 'GenresController');
 
 //Routes för movies (jan)
 Route::get('/movies', function () {
