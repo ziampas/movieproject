@@ -9,6 +9,12 @@ use \App\Actor;
 
 class ActorsController extends Controller
 {
+
+  //Add auth
+  public function __construct(){
+    $this->middleware('auth')->except(['index','show']);
+  }
+  
     public function index()
     {
       $actors = Actor::all();

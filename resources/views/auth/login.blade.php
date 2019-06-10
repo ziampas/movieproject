@@ -65,6 +65,7 @@
   <div class="control">
     <p>Create Account?</p>
     <a class="is-link" href="/register" name="submit">Register</a>
+    <a class="is-link" href="/" name="submit">Go back</a>
   </div>
 </div>
 </div>

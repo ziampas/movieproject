@@ -32,12 +32,12 @@
         @if (Route::has('login'))
     <div class="top-right links">
         @auth
-            <a href="{{ url('/logout') }}"> logout </a>
+            <a class="button is-success" href="{{ url('/logout') }}"> logout </a>
         @else
-            <a href="{{ route('login') }}">Login</a>
+            <a class="button is-success" href="{{ route('login') }}">Login</a>
 
             @if (Route::has('register'))
-                <a href="{{ route('register') }}">Register</a>
+                <a class="button is-success" href="{{ route('register') }}">Register</a>
             @endif
         @endauth
     </div>

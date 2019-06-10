@@ -26,7 +26,7 @@
 
 <div class="column">
   <h1 class="title is-4">Add actors:</h1>
-  <a href="/actors/create">Log in to add actors</a>
+  <a href="/actors/create">Add actors</a>
 </div>
 
 </div>
