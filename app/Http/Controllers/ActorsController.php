@@ -50,11 +50,11 @@ return view('actors/edit', compact('actor'));
 
     public function store()
     {
-      request()->validate([
-        'firstname' => 'required',
-        'lastname' => 'required',
-        'birthdate' => 'required'
-      ]);
+      // request()->validate([
+      //   'firstname' => 'required',
+      //   'lastname' => 'required',
+      //   'birthdate' => 'required'
+      // ]);
 
 Actor::create(request(['firstname', 'lastname', 'birthdate']));
       return redirect('/actors');
