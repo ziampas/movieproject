@@ -19,6 +19,10 @@ class CreateMoviesTable extends Migration
           $table->date('movieyear');
           $table->string('movieplot');
           $table->string('moviepicture');
+          $table->integer('user_id')->unsigned();
+      });
+      Schema::table('movies', function ($table){
+          $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
       });
     }
 

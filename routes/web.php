@@ -27,7 +27,7 @@ Route::resource('movies', 'MoviesController');
 //Kristian
 Route::resource('/actors', 'ActorsController');
 
-
+Route::resource('/profile', 'UserController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

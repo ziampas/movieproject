@@ -36,10 +36,18 @@ class MoviesController extends Controller
        {
          return view('movies/create');
        }
-       public function store()
+
+       public function store(Request $request)
        {
-         Movies::create(request(['moviesname', 'moviepicture', 'movieplot', 'movieyear']));
-         return redirect('/movies');
+           $movie = new Movies;
+           $movie->moviesname = $request->get('moviesname');
+           $movie->moviepicture = $request->get('moviepicture');
+           $movie->movieplot = $request->get('movieplot');
+           $movie->movieyear = $request->get('movieyear');
+           // $user = Movies::find($request->get('movie_id'));
+           $movie->user_id=auth()->id();
+           $movie->save();
+           return redirect('/movies');
        }
        public function delete()
        {
