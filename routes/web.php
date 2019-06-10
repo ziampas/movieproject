@@ -15,16 +15,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Routes för actors (Kristian)
-Route::resource('actors', 'ActorsController');
+//Kristian
+Route::resource('/actors', 'ActorsController');
 
-//Routes för genres (Zeena)
-Route::resource('genres', 'GenresController');
+//Zeena
+Route::resource('/genres', 'GenresController');
 
-//Routes för movies
+//Routes för movies (jan)
 Route::get('/movies', function () {
     return view('movies/index');
 });
+
 
 Auth::routes();
 
