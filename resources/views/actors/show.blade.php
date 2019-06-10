@@ -21,5 +21,5 @@
 </table>
 </div>
 
-<a href="/actors" class="button is-success" style="margin-top: 1rem;">Go back</a>
+<a href="/actors" class="button is-link">Go back</a>
 @endsection

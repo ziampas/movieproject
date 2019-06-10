@@ -40,7 +40,7 @@
   <div class="control" style="margin-top: 1rem;">
     <div class="field">
       <div class="control">
-        <button type="submit" class="button is-danger">Delete actor</button>
+        <button type="submit" class="button is-danger">Delete movie</button>
         <a href="/movies" class="button is-info">Go back</a>
       </div>
     </div>
