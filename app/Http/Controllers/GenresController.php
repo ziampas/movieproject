@@ -14,4 +14,15 @@ class GenresController extends Controller
 
     return view('genres/view', compact('genres'));
   }
+
+  public function create()
+  {
+
+
+    return view('genres/create');
+  }
+
+
+
+
 }
