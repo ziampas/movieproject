@@ -10,6 +10,6 @@
   <label class="label">Movie Plot:<input class="input" type="text" name="movieplot"></input></label>
   <label class="label">Movie Release Year:<input class="input" type="date" name ="movieyear"></input></label>
   <button class="button is-success" type="submit">Add</button>
-  <a href="/actors" class="button is-info">Go back</a>
+  <a href="/movies" class="button is-info">Go back</a>
 </form>
 @endsection

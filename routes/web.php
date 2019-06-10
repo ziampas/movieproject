@@ -31,3 +31,5 @@ Route::resource('/actors', 'ActorsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/comment/store', 'CommentsController@store')->name('comment.add');

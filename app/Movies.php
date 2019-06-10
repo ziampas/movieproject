@@ -10,4 +10,8 @@ class Movies extends Model
   protected $fillable = [
     'moviesname', 'movieyear', 'movieplot', 'moviepicture'
   ];
+  public function comments()
+ {
+   return $this->hasMany('App\Comment');
+ }
 }
