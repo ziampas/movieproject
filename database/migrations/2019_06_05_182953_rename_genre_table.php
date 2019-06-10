@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGenreTable extends Migration
+class RenameGenreTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,7 @@ class CreateGenreTable extends Migration
      */
     public function up()
     {
-      Schema::create('genre', function (Blueprint $table) {
-          $table->increments('genreid');
-          $table->string('genrename');
-      });
+        Schema::rename('genre', 'genres');
     }
 
     /**
@@ -26,6 +23,6 @@ class CreateGenreTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('genre');
+        Schema::rename('genres', 'genre');
     }
 }

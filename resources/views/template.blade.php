@@ -27,7 +27,7 @@
         <li class="is-active"><a href="/">Homepage</a></li>
         <li><a href="/movies">Movies</a></li>
         <li><a href="/actors">Actors</a></li>
-        <li><a href="/genre">Genre</a></li>
+        <li><a href="/genres">Genres</a></li>
       </ul>
     </div>
   </nav>

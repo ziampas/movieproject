@@ -19,11 +19,12 @@ Route::get('/movies', function () {
     return view('movies/view');
 });
 
+//Kristian
 Route::get('/actors', 'ActorsController@index');
 
-Route::get('/genre/', function () {
-    return view('genre/view');
-});
+//Zeena
+Route::get('/genres', 'GenresController@index');
+
 
 
 //Routes för movies
@@ -43,14 +44,14 @@ Route::get('/actors/remove', function () {
 });
 
 //Routes för genres
-Route::get('/genre/add', function () {
+Route::get('/genres/add', function () {
     return view('genre/add');
 });
-Route::get('/genre/edit', function () {
-    return view('genre/edit');
+Route::get('/genres/edit', function () {
+    return view('genres/edit');
 });
-Route::get('/genre/remove', function () {
-    return view('genre/remove');
+Route::get('/genres/remove', function () {
+    return view('genres/remove');
 });
 
 
