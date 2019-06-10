@@ -5,6 +5,13 @@
     <title>Movie Database</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<style>
+
+.article {
+  margin-bottom: 1rem;
+}
+
+</style>
   </head>
   <body>
 
@@ -50,7 +57,7 @@
         <li class="is-active"><a href="/">Homepage</a></li>
         <li><a href="/movies">Movies</a></li>
         <li><a href="/actors">Actors</a></li>
-        <li><a href="/genre">Genre</a></li>
+        <li><a href="/genres">Genres</a></li>
       </ul>
     </div>
   </nav>
