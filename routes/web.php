@@ -10,14 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/movies', function () {
-    return view('movies/view');
-});
 
 Route::get('/genre/', function () {
     return view('genre/view');
@@ -25,9 +23,7 @@ Route::get('/genre/', function () {
 
 
 //Routes för movies
-Route::get('/movies', function () {
-    return view('movies/index');
-});
+Route::resource('movies', 'MoviesController');
 
 //Routes för actors (Kristian)
 Route::resource('actors', 'ActorsController');
@@ -44,6 +40,10 @@ Route::get('/genre/remove', function () {
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

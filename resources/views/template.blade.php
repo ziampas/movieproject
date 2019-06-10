@@ -12,10 +12,33 @@
 
 <section class="hero is-dark" >
   <div class="hero-body">
-    <div class="container">
-<!-- <img src="{{ URL::to('/') }}/img/logo.png" alt=""> -->
-<h1 class="title is-2">Movie DB</h1>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <h2 class="title">Movie DB</h2>
     </div>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        @if (Route::has('login'))
+    <div class="top-right links">
+        @auth
+            <a href="{{ url('/logout') }}"> logout </a>
+        @else
+            <a href="{{ route('login') }}">Login</a>
+
+            @if (Route::has('register'))
+                <a href="{{ route('register') }}">Register</a>
+            @endif
+        @endauth
+    </div>
+@endif
+      </div>
+    </div>
+  </div>
+</nav>
   </div>
 
 <!-- Navigation -->
