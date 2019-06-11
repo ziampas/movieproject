@@ -20,6 +20,7 @@ Route::resource('/actors', 'ActorsController');
 
 //Zeena
 Route::resource('/genres', 'GenresController');
+//Route::post('/genres', 'GenresController');
 
 //Routes för movies (jan)
 Route::get('/movies', function () {

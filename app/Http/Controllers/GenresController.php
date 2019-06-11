@@ -17,10 +17,16 @@ class GenresController extends Controller
 
   public function create()
   {
-
-
     return view('genres/create');
   }
+
+  public function store()
+  {
+    Genre::create(request(['genrename']));
+          return redirect('/genres');
+  }
+
+
 
 
 
