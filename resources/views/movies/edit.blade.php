@@ -20,9 +20,8 @@
   </div>
   <div class="field">
     <label class="label">Movie Plot</label>
-    <div class="control">
-      <input class="input" type="text" name="movieplot"  value="{{$movie->movieplot}}">
-    </div>
+      <textarea class="input" type="text" name="movieplot"  value="{{$movie->movieplot}}">
+      </textarea>
   </div>
   <div class="field">
     <label class="label">Movie Year</label>

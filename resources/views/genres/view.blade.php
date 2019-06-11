@@ -19,8 +19,8 @@
     </table>
   </div>
   <div class="column">
-    <h1 class="title is-4">Add genres:</h1>
-    <a href="/genres/create">Log in to add genre</a>
+    <h1 class="title is-4">Add a genre:</h1>
+    <a class="button is-success" href="/genres/create">Click here</a>
   </div>
  </div>
 @endsection

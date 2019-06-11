@@ -17,13 +17,11 @@
 
 <!-- Hero börjar -->
 
-<section class="hero is-dark" >
+<section class="hero is-light is-small" >
   <div class="hero-body">
     <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <div class="navbar-item">
-      <h2 class="title">Movie DB</h2>
-    </div>
+      <img src="{{url('/img/logo.png')}}" alt="Image"/>
   </div>
 
   <div id="navbarBasicExample" class="navbar-menu">
@@ -52,16 +50,14 @@
 <!-- Navigation -->
 
 <div class="hero-foot">
-  <nav class="tabs is-boxed is-fullwidth">
-    <div class="container">
+  <div class="tabs is-right is-boxed">
       <ul>
-        <li class="is-active"><a href="/">Homepage</a></li>
+        <li><a href="/">Homepage</a></li>
         <li><a href="/movies">Movies</a></li>
         <li><a href="/actors">Actors</a></li>
         <li><a href="/genres">Genres</a></li>
       </ul>
-    </div>
-  </nav>
+  </div>
 </div>
 </section>
 

@@ -3,8 +3,9 @@
 @section('content')
 <div class="columns">
   <div class="column is-two-thirds">
-
-<h1 class="title is-4">Actors:</h1>
+<div class="content">
+ <p class="title">List of actors:<p>
+</div>
 <table class="table">
   <tr>
     <th>First name</th>
@@ -21,8 +22,8 @@
   </tr>
   @endforeach
 </table>
-</div>
 
+</div>
 
 <div class="column has-text-centered">
   <h1 class="title is-4">Add actors:</h1>
