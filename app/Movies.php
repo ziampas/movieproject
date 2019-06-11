@@ -18,4 +18,8 @@ class Movies extends Model
 {
 return $this->belongsTo('App\User');
 }
+public function actors()
+{
+ return $this->hasMany('App\Actor');
+}
 }

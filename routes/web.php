@@ -28,9 +28,13 @@ Route::resource('movies', 'MoviesController');
 //Kristian
 Route::resource('/actors', 'ActorsController');
 
+//Jan
 Route::resource('/profile', 'UserController');
 Auth::routes();
+
+//Annat
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/comment/store', 'CommentsController@store')->name('comment.add');
+Route::post('/actor/store', 'ActorsController@store')->name('actor.add');

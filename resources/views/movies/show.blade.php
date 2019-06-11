@@ -12,14 +12,18 @@
 </ul>
 </div>
 <div class="box" style="margin-top: 1rem;">
-<h1 class="title is-4">Casting:</h1>
+<h1 class="title is-4">Cast:</h1>
 <table class="table">
   <tr>
-    <th>Actors</th>
+    <th>First name:</th>
+    <th>Last name:</th>
   </tr>
   <tr>
-    <td>Mark Wahlberg</td>
-  </tr>
+    @foreach($movie->actors as $actor)
+      <td>{{$actor->firstname}}</td>
+      <td>{{$actor->lastname}}</td>
+    </tr>
+    @endforeach
 </table>
 </div>
 <a href="/movies/{{ $movie-> id}}/edit" class="button is-success" style="margin-top: 1rem;">Edit</a>

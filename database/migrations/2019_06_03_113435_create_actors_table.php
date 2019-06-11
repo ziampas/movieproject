@@ -18,6 +18,10 @@ class CreateActorsTable extends Migration
           $table->string('firstname');
           $table->string('lastname');
           $table->date('birthdate');
+          $table->integer('movies_id')->unsigned();
+      });
+      Schema::table('actors', function ($table){
+          $table->foreign('movies_id')->references('id')->on('movies')->onDelete('cascade');
       });
     }
 

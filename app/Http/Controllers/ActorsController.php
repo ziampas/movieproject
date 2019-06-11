@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use \App\Actor;
+use \App\Movies;
+
 
 class ActorsController extends Controller
 {
@@ -14,7 +16,7 @@ class ActorsController extends Controller
   public function __construct(){
     $this->middleware('auth')->except(['index','show']);
   }
-  
+
     public function index()
     {
       $actors = Actor::all();
@@ -24,8 +26,8 @@ class ActorsController extends Controller
 
     public function create()
     {
-      return view('actors/create');
-    }
+      $movies = Movies::all();
+      return view('actors/create', compact('movies'));    }
 
     public function edit(Actor $actor)
     {
@@ -54,15 +56,28 @@ return view('actors/edit', compact('actor'));
           return view('actors/show', compact('actor'));
         }
 
-    public function store()
-    {
-      // request()->validate([
-      //   'firstname' => 'required',
-      //   'lastname' => 'required',
-      //   'birthdate' => 'required'
-      // ]);
 
-Actor::create(request(['firstname', 'lastname', 'birthdate']));
-      return redirect('/actors');
+//     public function store()
+//     {
+//       // request()->validate([
+//       //   'firstname' => 'required',
+//       //   'lastname' => 'required',
+//       //   'birthdate' => 'required'
+//       // ]);
+//
+// Actor::create(request(['firstname', 'lastname', 'birthdate']));
+//       return redirect('/actors');
+//     }
+
+    public function store(Request $request)
+    {
+        $actor = new Actor;
+        $actor->firstname = $request->get('firstname');
+        $actor->lastname = $request->get('lastname');
+        $actor->birthdate = $request->get('birthdate');
+        $actor->movies_id = $request->get('movies_id');
+        // $movie = Movies::find($request->get('moviesname'));
+        $actor->save();
+        return redirect('/actors');
     }
 }

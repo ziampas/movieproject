@@ -37,6 +37,10 @@ class MoviesController extends Controller
          return view('movies/create');
        }
 
+       public function movies() {
+         $movies = Movies::all();
+       }
+
        public function store(Request $request)
        {
            $movie = new Movies;
