@@ -21,6 +21,7 @@
   <div class="field">
     <label class="label">Movie Plot</label>
       <textarea class="input" type="text" name="movieplot"  value="{{$movie->movieplot}}">
+        {{$movie->movieplot}}
       </textarea>
   </div>
   <div class="field">
