@@ -36,7 +36,7 @@
 <!-- End of Nyheter -->
   </div>
   <div class ="column has-text-right">
-      <h1 class="title">Trending movies:</h1>
+    <img src="{{url('/img/button_trending-movies.png')}}" alt="Image"/>
 <iframe src="https://www.youtube.com/embed/1roy4o4tqQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>

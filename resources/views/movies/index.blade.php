@@ -26,8 +26,8 @@
 </div>
 <div class="column">
   <div class="column has-text-centered">
-    <h1 class="title is-4">Add movies:</h1>
-    <a class="button is-success" href="/movies/create">Click here</a>
+    <img src="{{url('/img/button_add-movie.png')}}" alt="Image"/>
+    <p><a class="button is-success" href="/movies/create">Click here</a></p>
   </div>
 
 </div>

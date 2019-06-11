@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="columns">
-  <div class="column">
+  <div class="column is-two-thirds">
     <h1 class="title is-4">Genres:</h1>
     <table class="table">
       <tr>
@@ -18,9 +18,9 @@
         @endforeach
     </table>
   </div>
-  <div class="column">
-    <h1 class="title is-4">Add a genre:</h1>
-    <a class="button is-success" href="/genres/create">Click here</a>
+  <div class="column has-text-centered">
+    <img src="{{url('/img/button_add-genre.png')}}" alt="Image"/>
+    <p><a class="button is-success" href="/genres/create">Click here</a></p>
   </div>
  </div>
 @endsection

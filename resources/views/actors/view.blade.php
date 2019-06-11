@@ -4,7 +4,7 @@
 <div class="columns">
   <div class="column is-two-thirds">
 <div class="content">
- <p class="title">List of actors:<p>
+ <p class="title">Actors:<p>
 </div>
 <table class="table">
   <tr>
@@ -26,8 +26,8 @@
 </div>
 
 <div class="column has-text-centered">
-  <h1 class="title is-4">Add actors:</h1>
-  <a class="button is-success" href="/actors/create">Click here</a>
+  <img src="{{url('/img/button_add-actor.png')}}" alt="Image"/>
+<p>  <a class="button is-success" href="/actors/create">Click here</a></p>
 </div>
 
 </div>
