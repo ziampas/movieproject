@@ -16,25 +16,18 @@ Route::get('/', function () {
     return view('index');
 });
 
-
 //Zeena
 Route::resource('/genres', 'GenresController');
-//Route::post('/genres', 'GenresController');
-
-
-//Routes för movies
-Route::resource('movies', 'MoviesController');
 
 //Kristian
 Route::resource('/actors', 'ActorsController');
 
 //Jan
+Route::resource('movies', 'MoviesController');
 Route::resource('/profile', 'UserController');
-Auth::routes();
 
 //Annat
-
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::post('/comment/store', 'CommentsController@store')->name('comment.add');
 Route::post('/actor/store', 'ActorsController@store')->name('actor.add');

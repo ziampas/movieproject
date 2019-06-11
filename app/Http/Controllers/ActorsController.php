@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use \App\Actor;
 use \App\Movies;
 
-
 class ActorsController extends Controller
 {
 
@@ -56,19 +55,6 @@ return view('actors/edit', compact('actor'));
           return view('actors/show', compact('actor'));
         }
 
-
-//     public function store()
-//     {
-//       // request()->validate([
-//       //   'firstname' => 'required',
-//       //   'lastname' => 'required',
-//       //   'birthdate' => 'required'
-//       // ]);
-//
-// Actor::create(request(['firstname', 'lastname', 'birthdate']));
-//       return redirect('/actors');
-//     }
-
     public function store(Request $request)
     {
         $actor = new Actor;
@@ -76,7 +62,7 @@ return view('actors/edit', compact('actor'));
         $actor->lastname = $request->get('lastname');
         $actor->birthdate = $request->get('birthdate');
         $actor->movies_id = $request->get('movies_id');
-        // $movie = Movies::find($request->get('moviesname'));
+
         $actor->save();
         return redirect('/actors');
     }
