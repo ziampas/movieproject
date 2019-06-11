@@ -8,6 +8,10 @@ use \App\Genre;
 
 class GenresController extends Controller
 {
+  // add auth to some pages
+  public function __construct(){
+    $this->middleware('auth')->except(['index','show']);
+  }
   public function index()
   {
     $genres = Genre::all();
