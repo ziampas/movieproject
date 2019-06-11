@@ -1,34 +1,63 @@
 @extends('template')
 
 @section('content')
-<h1 class="title is-4">{{ $movie->moviesname}}</h1>
+<div class="column">
+    <div class="container">
+      <div class="hero">
+        <div class="level">
+            <div class="level-left">
+              <div class="level-item">
+                <div class="title">
+                  {{ $movie->moviesname}}
+                </div>
+              </div>
+            </div>
+            <div class="level-right">
+              <div class="level-item">
+              <div class="tags">
+                <a href="/movies/{{ $movie-> id}}/edit" class="tag is-info" style="margin-top: 1rem;">Edit</a>
+                <a href="/movies" class="tag is-light" style="margin-top: 1rem;">Go back</a>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+<div class="column">
+    <div class="container">
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <p class="subtitle">Title: {{ $movie->moviesname}}</p>
+      <p class="subtitle">Release Year: {{ $movie->movieyear}}</p>
+      <div class="content">
+        <p class="subtitle">Plot:</p>
+          {{ $movie->movieplot}}
+      </div>
+    </div>
+    <div class="tile is-child box">
+      <p class="subtitle">Cast:</p>
+          <ul class="tags">
+          @foreach($movie->actors as $actor)
+              <li class="tag is-medium"> <a href="/actors/{{$actor->id}}">{{$actor->firstname}} {{$actor->lastname}}</a> </li>
+          @endforeach
+            </ul>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box">
+      <figure class="image is-square">
+        <img src="{{ $movie->moviepicture}}" alt="{{ $movie->moviesname}}">
+      </figure>
+    </div>
+  </div>
+</div>
 
-<ul>
-    <li><img src="{{ $movie->moviepicture}}" alt=""></li>
-    <div class="box">
-    <li><h1 class="title is-4">{{ $movie->moviesname}}</h1></li>
-    <li><strong>{{ $movie->movieyear}}</strong></li>
-    <li>{{ $movie->movieplot}}</li>
-</ul>
-</div>
-<div class="box" style="margin-top: 1rem;">
-<h1 class="title is-4">Cast:</h1>
-<table class="table">
-  <tr>
-    <th>First name:</th>
-    <th>Last name:</th>
-  </tr>
-  <tr>
-    @foreach($movie->actors as $actor)
-      <td>{{$actor->firstname}}</td>
-      <td>{{$actor->lastname}}</td>
-    </tr>
-    @endforeach
-</table>
-</div>
-<a href="/movies/{{ $movie-> id}}/edit" class="button is-success" style="margin-top: 1rem;">Edit</a>
-<a href="/movies" class="button is-success" style="margin-top: 1rem;">Go back</a>
-<h3>Comments <small>{{ $movie->comments()->count() }} total</small></h3>
+
+
+
+<h3 class="tag">Comments <small>{{ $movie->comments()->count() }} total</small></h3>
 <article class="media">
   <div class="media-content">
     <div class="content">
@@ -46,7 +75,7 @@
 </article>
 <br>
 
-<h4>Add comment</h4>
+<h4 class="tag">Add comment</h4>
 <form method="post" action="{{ route('comment.add') }}">
     {{ csrf_field() }}
     <div class="field">
@@ -68,4 +97,6 @@
   </div>
 </div>
 </form>
+</div>
+</div>
 @endsection

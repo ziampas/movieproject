@@ -1,13 +1,13 @@
 @extends('template')
 
 @section('content')
+<div class="column">
+    <div class="container">
 <form method="POST" action="{{ action('MoviesController@update', $movie->id) }}">
   {{ method_field('PATCH') }}
   {{ csrf_field() }}
 
-
-<div class="field">
-  <h1 class="title is-4">Edit Movie</h1>
+  <h1 class="title is-4">Edit Movie with ID: {{$movie->id}} </h1>
   <label class="label">Movie Title</label>
   <div class="control">
     <input class="input" type="text" name="moviesname" value="{{$movie->moviesname}}">
@@ -31,7 +31,6 @@
     </div>
   </div>
   <button class="button is-success" type="submit">Update</button>
-</div>
 </form>
 
 <form method="POST" action="{{ action('MoviesController@update', $movie->id) }}">
@@ -46,5 +45,6 @@
     </div>
 </div>
 </form>
-
+  </div>
+    </div>
 @endsection
