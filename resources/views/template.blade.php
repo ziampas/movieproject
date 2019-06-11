@@ -5,6 +5,13 @@
     <title>Movie Database</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<style>
+
+.article {
+  margin-bottom: 1rem;
+}
+
+</style>
   </head>
   <body>
 
@@ -12,10 +19,34 @@
 
 <section class="hero is-dark" >
   <div class="hero-body">
-    <div class="container">
-<!-- <img src="{{ URL::to('/') }}/img/logo.png" alt=""> -->
-<h1 class="title is-2">Movie DB</h1>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <h2 class="title">Movie DB</h2>
     </div>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        @if (Route::has('login'))
+    <div class="top-right links">
+        @auth
+          <a class="button is-light" href="{{ url('/profile/home') }}"> Profile </a>
+            <a class="button is-success" href="{{ url('/logout') }}"> Log out </a>
+        @else
+            <a class="button is-success" href="{{ route('login') }}">Login</a>
+
+            @if (Route::has('register'))
+                <a class="button is-success" href="{{ route('register') }}">Register</a>
+            @endif
+        @endauth
+    </div>
+@endif
+      </div>
+    </div>
+  </div>
+</nav>
   </div>
 
 <!-- Navigation -->

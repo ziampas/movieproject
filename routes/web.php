@@ -10,24 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/', function () {
     return view('index');
 });
 
-//Kristian
-Route::resource('/actors', 'ActorsController');
 
 //Zeena
 Route::resource('/genres', 'GenresController');
 //Route::post('/genres', 'GenresController');
 
-//Routes för movies (jan)
-Route::get('/movies', function () {
-    return view('movies/index');
-});
 
+//Routes för movies
+Route::resource('movies', 'MoviesController');
 
+//Kristian
+Route::resource('/actors', 'ActorsController');
+
+Route::resource('/profile', 'UserController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/comment/store', 'CommentsController@store')->name('comment.add');

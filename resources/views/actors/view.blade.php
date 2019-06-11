@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="columns">
-  <div class="column">
+  <div class="column is-two-thirds">
 
 <h1 class="title is-4">Actors:</h1>
 <table class="table">
@@ -24,9 +24,9 @@
 </div>
 
 
-<div class="column">
+<div class="column has-text-centered">
   <h1 class="title is-4">Add actors:</h1>
-  <a href="/actors/create">Log in to add actors</a>
+  <a class="button is-success" href="/actors/create">Click here</a>
 </div>
 
 </div>

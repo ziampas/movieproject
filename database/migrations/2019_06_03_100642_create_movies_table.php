@@ -14,11 +14,15 @@ class CreateMoviesTable extends Migration
     public function up()
     {
       Schema::create('movies', function (Blueprint $table) {
-          $table->increments('moviesid');
+          $table->increments('id');
           $table->string('moviesname');
           $table->date('movieyear');
           $table->string('movieplot');
           $table->string('moviepicture');
+          $table->integer('user_id')->unsigned();
+      });
+      Schema::table('movies', function ($table){
+          $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
       });
     }
 
