@@ -11,6 +11,9 @@
       <tr>
         @foreach ($genres as $genre)
         <td>{{$genre->genrename}}</td>
+
+        <td><a class="button is-small is-success" href="/genres/{{$genre->id}}/edit">View</a></td>
+
       </tr>
         @endforeach
     </table>

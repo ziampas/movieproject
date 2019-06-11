@@ -12,6 +12,7 @@ class GenresController extends Controller
   public function __construct(){
     $this->middleware('auth')->except(['index','show']);
   }
+
   public function index()
   {
     $genres = Genre::all();
@@ -27,8 +28,35 @@ class GenresController extends Controller
   public function store()
   {
     Genre::create(request(['genrename']));
-          return redirect('/genres');
+     return redirect('/genres');
   }
+
+  public function edit(Genre $genre)
+  {
+    return view('genres/edit', compact('genre'));
+  }
+
+  public function update(Genre $genre)
+  {
+    $genre->update(request(['genrename']));
+    return redirect('/genres');
+  }
+
+  public function delete()
+  {
+    return view('genres/delete');
+  }
+
+  public function destroy(Genre $genre)
+  {
+    $genre->delete();
+    return redirect('/genres');
+  }
+
+  public function show(Genre $genre)
+      {
+        return view('genres/show', compact('genres'));
+      }
 
 
 
